@@ -1,0 +1,8 @@
+.env
+P0_NOTES.md
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.log
+.pytest_cache/
