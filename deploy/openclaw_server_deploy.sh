@@ -64,18 +64,20 @@ recreate)
 
 deps)
   stage deps
+  # Python: 无需任何安装 —— src/llm.DeepSeekClient 在无 openai 时走 stdlib urllib 回退。
+  # 只需 npm 装 lark-cli 到持久化的 /home/node/runtime（飞书 reply/log/escalate 用）。
   D exec -u node "$GW" sh -lc '
     set -e
-    python3 -m venv /home/node/runtime/venv 2>/dev/null || true
-    /home/node/runtime/venv/bin/pip -q install -i https://pypi.tuna.tsinghua.edu.cn/simple openai 2>/dev/null \
-      || /home/node/runtime/venv/bin/pip -q install openai
-    echo "openai: $(/home/node/runtime/venv/bin/python -c "import openai;print(openai.__version__)")"
+    echo "python3: $(python3 -V 2>&1)  (stdlib-only, no pip needed)"
     mkdir -p /home/node/runtime/npm
-    npm i --prefix /home/node/runtime/npm --registry=https://registry.npmmirror.com @larksuite/cli >/dev/null 2>&1 \
-      || npm i --prefix /home/node/runtime/npm @larksuite/cli >/dev/null 2>&1
-    echo "lark-cli: $(/home/node/runtime/npm/node_modules/.bin/lark-cli --version 2>/dev/null || echo INSTALL_FAILED)"
+    npm i --prefix /home/node/runtime/npm --registry=https://registry.npmmirror.com @larksuite/cli >/tmp/npm.log 2>&1 \
+      || npm i --prefix /home/node/runtime/npm @larksuite/cli >>/tmp/npm.log 2>&1 \
+      || { echo "npm lark-cli FAILED"; tail -5 /tmp/npm.log; exit 1; }
+    LC=$(ls /home/node/runtime/npm/node_modules/.bin/lark-cli 2>/dev/null || true)
+    echo "lark-cli bin: ${LC:-NOT_FOUND}"
+    [ -n "$LC" ] && echo "lark-cli: $("$LC" --version 2>&1 | head -1)"
   ' 2>&1 | tee -a "$LOG"
-  log "deps DONE (openai in venv, lark-cli in /home/node/runtime/npm)"
+  log "deps DONE (python=stdlib-only; lark-cli in /home/node/runtime/npm)"
   ;;
 
 discover)
