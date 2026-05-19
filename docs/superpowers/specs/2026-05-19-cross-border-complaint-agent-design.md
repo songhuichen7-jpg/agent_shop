@@ -67,6 +67,11 @@ OpenClaw（腾讯云，小龙虾） ── 飞书 Channel ── 「跨境客服
 
 职责边界：OpenClaw 扛多渠道收发与沙箱执行；飞书 CLI 负责「AI 真正操作企业系统」（写多维表格、建任务）；用户交付中间的 Skill + 数据 + 护栏 + 评测。OpenClaw Skill 与飞书 CLI 的具体规范/命令面以官方文档为准，实现时定型，不臆造。
 
+**两个飞书集成面（须区分，可行性核实后明确）：**
+- (a) **OpenClaw 飞书 channel**：与商户聊天的入站/出站，由 OpenClaw 内建 channel 适配器负责，配置在 OpenClaw 控制台，需飞书自建应用具备 IM + 事件订阅权限。
+- (b) **飞书 CLI**：Skill 通过 `exec` 调 `lark-cli` 操作飞书数据（写多维表格看板行、建任务派单），需飞书应用具备 bitable + task + im 权限，并经一次性 `lark-cli auth login` OAuth 授权（凭据存 OS 密钥链，之后非交互可脚本化）。
+- 建议 (a)(b) 用**同一个飞书自建应用**、并集权限，减少 P0 配置量。
+
 ## 5. 核心组件：Skill「跨境客诉助手」
 
 本质 = 结构化 Skill 指令 + 2 个本地小工具 + 飞书 CLI 动作，不是编排引擎。
@@ -145,12 +150,26 @@ OpenClaw（腾讯云，小龙虾） ── 飞书 Channel ── 「跨境客服
 
 ## 10. 阶段拆分（供 writing-plans 出实施计划）
 
-- **P0 环境**：腾讯云一键 OpenClaw + 飞书自建应用接通 + 飞书 CLI 跑通（发消息/写一行多维表格验证闭环）
+- **P0 环境**：腾讯云一键 OpenClaw + 飞书自建应用（并集权限）接通 channel + **OpenClaw 绑定 LLM（见 §11 待定决策）** + `npx @larksuite/cli@latest install` + `lark-cli config init` + `lark-cli auth login --recommend`（一次性 OAuth 人工授权）+ 冒烟验证闭环（`lark-cli im +messages-send` 发一条 + 写一行多维表格 + 建一个任务 + `lark-cli auth check`）；实际控制台版本与命令面记录进 README
 - **P1 数据**：政策 KB + mock 订单 + 测试集 v1
 - **P2 Skill v1**：分类→查单→取据→双语起草→输出契约（先无护栏打通）
 - **P3 护栏+决策**：两道护栏 + 升级触发器 + 飞书 CLI 行动（回复/写多维表格/建任务）
 - **P4 评测**：离线脚本 + baseline 对比 + 记分卡，按结果回调提示词/触发器
 - **P5 交付**：演示录屏 + README + 一页纸投递案例
+
+## 11. 可行性核实结论（2026-05-19）
+
+**结论：架构可行，整体低风险，无需改设计。** 仅以下小幅细化与 1 项待定决策。
+
+已核实：
+
+- **OpenClaw 自定义 Skill 机制**（低风险）：Skill = 目录 `SKILL.md`（YAML frontmatter + Markdown 指令，必需）+ `scripts/`（确定性 Bash/Python，Agent 可直接执行不占上下文）+ `references/`（按需查阅，如政策 KB / 飞书 CLI 用法 / 升级规则）+ `assets/`。工具集成经 `web_search`/`web_fetch`/`exec`。本设计 1:1 映射：`scripts/`→`order_lookup`/`policy_lookup`/护栏/评测；`references/`→政策 KB+飞书 CLI 备忘+升级规则；`SKILL.md`→处理链编排；`exec`→调 `lark-cli`。即 Anthropic 风格 Skill 格式，用户已熟。
+- **飞书 CLI 能力**（低风险）：`npx @larksuite/cli@latest install`；鉴权 app_id/secret + OAuth（`config init` / `auth login --recommend`，非交互模式输出授权链接给人点一次，凭据存 OS 密钥链）。发消息已确认 `lark-cli im +messages-send --chat-id "oc_xxx" --text "..."`；多维表格记录增改、任务建/查/改/完 均为官方能力（精确子命令以 `lark-cli <域> --help` 与官方文档 P0 定型）；`--format json/ndjson` 支持脚本化（满足 Skill `exec` 调用）。
+- **OpenClaw↔飞书 + 腾讯云**（低风险）：腾讯云 Lighthouse 有 OpenClaw 一键模板（AI Agent 类，荐 2核4G+，控制台 `:18789`），飞书 channel 有「快速 QR 配置」与「手动自建应用（AppID/Secret + 事件订阅 + 权限 + 发版）」两条官方路径，文档充分。
+
+细化（已并入 §4/§10，无需用户决策）：两个飞书集成面区分 + 单应用并集权限；P0 增一次性 `lark-cli auth login` 人工授权步；精确子命令 P0 定型。
+
+**待定决策（需用户拍板，写计划前确认）：OpenClaw 绑定哪个 LLM？** OpenClaw 模型无关。腾讯云大陆服务器出网到 Anthropic 不稳，多数 OpenClaw 教程绑国产模型（Kimi/百炼/通义）。建议：**线上 OpenClaw 绑国产模型（如 Kimi）跑实时客诉**，**离线评测/开发用 Claude**（用户重度可用）保证记分卡质量。待用户确认此项后进入 writing-plans。
 
 ## 附：工具与版本参考（实现时以官方文档为准）
 
@@ -164,3 +183,5 @@ OpenClaw（腾讯云，小龙虾） ── 飞书 Channel ── 「跨境客服
 - 飞书官网《飞书 CLI 安装与使用指南》 https://www.feishu.cn/content/article/7623291503305083853
 - larksuite/cli GitHub https://github.com/larksuite/cli/blob/main/README.zh.md
 - 腾讯云开发者社区《云上 OpenClaw 快速接入飞书指南》 https://cloud.tencent.com/developer/article/2626151
+- 菜鸟教程《OpenClaw Skills — ClawHub》 https://www.runoob.com/ai-agent/openclaw-skills.html
+- 腾讯云开发者社区《OpenClaw 自定义 Skill 开发踩坑全记录》 https://cloud.tencent.com/developer/article/2640166
