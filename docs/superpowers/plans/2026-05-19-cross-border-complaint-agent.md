@@ -1256,7 +1256,8 @@ def baseline_handle(message: str, llm) -> dict:
 - [ ] **Step 2: 写 `eval/run_eval.py`**
 
 ```python
-import json, pathlib, time, argparse
+import json, pathlib, sys, time, argparse
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))  # 让 `python eval/run_eval.py` 能 import src/eval（计划缺陷修正 2026-05-20）
 from src.llm import DeepSeekClient
 from src.pipeline import handle
 from src.guardrail import check_no_overpromise

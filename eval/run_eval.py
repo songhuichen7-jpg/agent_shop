@@ -1,4 +1,5 @@
-import json, pathlib, time, argparse
+import json, pathlib, sys, time, argparse
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 from src.llm import DeepSeekClient
 from src.pipeline import handle
 from src.guardrail import check_no_overpromise

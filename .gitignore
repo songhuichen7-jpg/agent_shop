@@ -7,3 +7,6 @@ __pycache__/
 *.log
 .pytest_cache/
 .DS_Store
+
+eval/_*.err
+eval/*.err
