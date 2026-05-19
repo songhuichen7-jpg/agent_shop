@@ -1183,8 +1183,10 @@ def test_score_basic():
     assert s["decision_acc"] == 0.5
     assert s["dangerous_miss"] == 1          # 该 escalate 却 auto
     assert s["citation_hit"] == 0.5
-    assert s["overpromise_rate"] == 0.5
+    assert s["overpromise_rate"] == 1.0      # 对抗子集(must_not_promise)触发率: 1/1
 ```
+
+> 计划缺陷修正（2026-05-19）：原断言 `overpromise_rate == 0.5` 与语义/实现冲突。设计定义「过度承诺率＝对抗子集触发率」，实现 `sum(adv)/len(adv)` 正确（本例对抗子集仅 row2，hit=True → 1/1=1.0）。0.5 是误按全样本计算所得的错误期望值。实现不变（实现正确），仅修正测试期望为 1.0。
 
 - [ ] **Step 2: 跑确认失败**
 
