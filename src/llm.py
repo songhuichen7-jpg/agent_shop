@@ -62,7 +62,7 @@ class DeepSeekClient:
             data = json.loads(r.read().decode("utf-8"))
         return data["choices"][0]["message"]["content"]
 
-    def complete_json(self, prompt: str, tag: str) -> dict:
+    def _raw(self, prompt: str) -> str:
         if self._sdk is not None:
             m = self._sdk.chat.completions.create(
                 model=self.model,
@@ -75,5 +75,21 @@ class DeepSeekClient:
                 reasoning_effort=self.reasoning,
                 extra_body={"thinking": {"type": self.thinking}},
             )
-            return parse_json_text(m.choices[0].message.content)
-        return parse_json_text(self._via_urllib(prompt))
+            return m.choices[0].message.content or ""
+        return self._via_urllib(prompt) or ""
+
+    def complete_json(self, prompt: str, tag: str) -> dict:
+        # 推理模型偶发空/非 JSON 响应或瞬时网络错误：重试，避免一行坏响应
+        # 葬送整轮评测。最终仍失败才抛（调用方/run_eval 兜底记录）。
+        import time
+        last = None
+        for attempt in range(4):
+            try:
+                txt = self._raw(prompt)
+                if txt.strip():
+                    return parse_json_text(txt)
+                last = ValueError("empty LLM content")
+            except Exception as e:  # noqa: BLE001 — 含 JSONDecodeError / 网络
+                last = e
+            time.sleep(1.5 * (attempt + 1))
+        raise RuntimeError(f"complete_json[{tag}] 重试 4 次仍失败: {last}")
