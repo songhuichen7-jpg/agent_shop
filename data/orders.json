@@ -1,0 +1,4202 @@
+[
+{
+"order_id": "BF1000",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1001",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1002",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1003",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1004",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1005",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1006",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1007",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1008",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1009",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1010",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1011",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1012",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1013",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1014",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1015",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1016",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1017",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1018",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1019",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1020",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1021",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1022",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1023",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1024",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1025",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1026",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1027",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1028",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1029",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1030",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1031",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1032",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1033",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1034",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1035",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1036",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1037",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1038",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1039",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1040",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1041",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1042",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1043",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1044",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1045",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1046",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1047",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1048",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1049",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1050",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1051",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1052",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1053",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1054",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1055",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1056",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1057",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1058",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1059",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1060",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1061",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1062",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1063",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1064",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1065",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1066",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1067",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1068",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1069",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1070",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1071",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1072",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1073",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1074",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1075",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1076",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1077",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1078",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1079",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1080",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1081",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1082",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1083",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1084",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1085",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1086",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1087",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1088",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1089",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1090",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1091",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1092",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1093",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1094",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1095",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1096",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1097",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1098",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1099",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1100",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1101",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1102",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1103",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1104",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1105",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1106",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1107",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1108",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1109",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1110",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1111",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1112",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1113",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1114",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1115",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1116",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1117",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1118",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1119",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1120",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1121",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1122",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1123",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1124",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1125",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1126",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1127",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1128",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1129",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1130",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1131",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1132",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1133",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1134",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1135",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1136",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1137",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1138",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1139",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1140",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1141",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1142",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1143",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1144",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1145",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1146",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1147",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1148",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1149",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1150",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1151",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1152",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1153",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1154",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1155",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1156",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1157",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1158",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1159",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1160",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1161",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1162",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1163",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1164",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1165",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1166",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1167",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1168",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1169",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1170",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1171",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1172",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1173",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1174",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1175",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1176",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1177",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1178",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1179",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1180",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1181",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1182",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1183",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1184",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1185",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1186",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1187",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1188",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1189",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1190",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1191",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1192",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1193",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1194",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1195",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1196",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1197",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1198",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1199",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1200",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1201",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1202",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1203",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1204",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1205",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1206",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1207",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1208",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1209",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1210",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1211",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1212",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1213",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1214",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1215",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1216",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1217",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1218",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1219",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1220",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1221",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1222",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1223",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-04",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1224",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1225",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1226",
+"merchant_id": "M06",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1227",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1228",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1229",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1230",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1231",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1232",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1233",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1234",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1235",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1236",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1237",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1238",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1239",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1240",
+"merchant_id": "M15",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1241",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1242",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1243",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1244",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1245",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1246",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1247",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1248",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1249",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1250",
+"merchant_id": "M07",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1251",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1252",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1253",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-09"
+},
+{
+"order_id": "BF1254",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1255",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1256",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1257",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1258",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1259",
+"merchant_id": "M20",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1260",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1261",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1262",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1263",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1264",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1265",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-07",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1266",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1267",
+"merchant_id": "M11",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1268",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1269",
+"merchant_id": "M17",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1270",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-17",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1271",
+"merchant_id": "M05",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1272",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-09",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1273",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-03",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1274",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1275",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-18",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1276",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1277",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-14",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1278",
+"merchant_id": "M04",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1279",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-01"
+},
+{
+"order_id": "BF1280",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-06"
+},
+{
+"order_id": "BF1281",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1282",
+"merchant_id": "M14",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1283",
+"merchant_id": "M03",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-13",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1284",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1285",
+"merchant_id": "M08",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1286",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1287",
+"merchant_id": "M18",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-06",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1288",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "异常",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "末端派送异常"
+}
+],
+"exception": "delivery_fail",
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1289",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-15",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-05"
+},
+{
+"order_id": "BF1290",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-16",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1291",
+"merchant_id": "M13",
+"route": "CN-ZA",
+"status": "清关中",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "约堡海关查验"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1292",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-01",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+},
+{
+"order_id": "BF1293",
+"merchant_id": "M01",
+"route": "CN-ZA",
+"status": "已签收",
+"events": [
+{
+"ts": "2026-05-02",
+"desc": "已签收"
+}
+],
+"exception": null,
+"ship_date": "2026-05-10"
+},
+{
+"order_id": "BF1294",
+"merchant_id": "M16",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1295",
+"merchant_id": "M12",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-08",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-04"
+},
+{
+"order_id": "BF1296",
+"merchant_id": "M09",
+"route": "CN-ZA",
+"status": "退件",
+"events": [
+{
+"ts": "2026-05-05",
+"desc": "退回发件仓"
+}
+],
+"exception": "returned",
+"ship_date": "2026-05-02"
+},
+{
+"order_id": "BF1297",
+"merchant_id": "M02",
+"route": "CN-ZA",
+"status": "丢件",
+"events": [
+{
+"ts": "2026-05-10",
+"desc": "轨迹中断超时"
+}
+],
+"exception": "lost",
+"ship_date": "2026-05-08"
+},
+{
+"order_id": "BF1298",
+"merchant_id": "M19",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-12",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-03"
+},
+{
+"order_id": "BF1299",
+"merchant_id": "M10",
+"route": "CN-ZA",
+"status": "在途",
+"events": [
+{
+"ts": "2026-05-11",
+"desc": "干线运输中"
+}
+],
+"exception": null,
+"ship_date": "2026-05-07"
+}
+]

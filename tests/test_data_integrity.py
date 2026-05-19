@@ -17,3 +17,16 @@ def test_policy_kb_schema():
         ids.add(c["clause_id"])
     cats = {c["category"] for c in kb}
     assert cats == CATEGORIES, f"每个类目至少 1 条，缺 {CATEGORIES - cats}"
+
+STATUSES = {"在途","清关中","已签收","异常","退件","丢件"}
+
+def test_orders_schema():
+    orders = load("orders.json")
+    assert 200 <= len(orders) <= 400, f"订单数应 200-400，实际 {len(orders)}"
+    ids = set()
+    for o in orders:
+        assert set(o) >= {"order_id","merchant_id","route","status","events","exception","ship_date"}
+        assert o["order_id"] not in ids; ids.add(o["order_id"])
+        assert o["status"] in STATUSES
+        assert isinstance(o["events"], list) and o["events"]
+    assert {o["status"] for o in orders} == STATUSES, "每种状态至少 1 单"
