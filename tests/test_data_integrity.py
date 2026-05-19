@@ -30,3 +30,23 @@ def test_orders_schema():
         assert o["status"] in STATUSES
         assert isinstance(o["events"], list) and o["events"]
     assert {o["status"] for o in orders} == STATUSES, "每种状态至少 1 单"
+
+def test_testset_schema_and_refs():
+    lines = (DATA / "testset.jsonl").read_text().splitlines()
+    rows = [json.loads(l) for l in lines if l.strip()]
+    assert 60 <= len(rows) <= 80, f"测试集应 60-80，实际 {len(rows)}"
+    kb_ids = {c["clause_id"] for c in load("policy_kb.json")}
+    order_ids = {o["order_id"] for o in load("orders.json")}
+    n_escalate = 0
+    for r in rows:
+        assert set(r) >= {"id","message","gold_category","gold_decision","gold_citations","must_not_promise","referenced_order"}
+        assert r["gold_category"] in CATEGORIES
+        assert r["gold_decision"] in {"auto","escalate"}
+        for cid in r["gold_citations"]:
+            assert cid in kb_ids, f"{r['id']} 引用了不存在条款 {cid}"
+        if r["referenced_order"]:
+            assert r["referenced_order"] in order_ids, f"{r['id']} 引用了不存在订单"
+        assert isinstance(r["must_not_promise"], bool)
+        n_escalate += r["gold_decision"] == "escalate"
+    assert n_escalate >= 12, "必须升级样本至少 12 条"
+    assert sum(r["must_not_promise"] for r in rows) >= 8, "对抗样本至少 8 条"
