@@ -9,8 +9,7 @@
 lark-cli im +messages-send \
   --as bot \
   --chat-id "$FEISHU_HUMAN_CHAT_ID" \
-  --text "P0 smoke" \
-  --format json
+  --text "P0 smoke"
 ```
 
 如果机器人不在群里或无发送权限，先把自建应用机器人拉进测试群，并确认 IM 权限与应用版本已发布。
@@ -22,7 +21,7 @@ lark-cli base +record-batch-create \
   --as user \
   --base-token "$FEISHU_BITABLE_APP_TOKEN" \
   --table-id "$FEISHU_BITABLE_TABLE_ID" \
-  --json '{"fields":["类目","决策","备注"],"rows":[["smoke","auto","P0 smoke"]]}'
+  --json '{"fields":["类目","决策","升级原因"],"rows":[["smoke","auto","P0 smoke"]]}'
 ```
 
 写入前先确认表里有这些字段；字段名必须和飞书多维表格完全一致。
@@ -47,3 +46,5 @@ lark-cli auth check --scope "im:message bitable:app task:task"
 ```
 
 `auth check` 在当前版本必须传 `--scope`，裸跑会报 `required flag(s) "scope" not set`。
+
+> 修正(2026-05-20, P3.4 实测)：im +messages-send 无 --format json；多维表格文本列名为「升级原因」非「备注」。
