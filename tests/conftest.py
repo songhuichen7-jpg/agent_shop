@@ -1,9 +1,10 @@
 import json, pathlib, pytest
 
+# 共享数据目录，供后续 test 模块 (test_data_integrity 等) 导入使用
 DATA = pathlib.Path(__file__).parent.parent / "data"
 
 class FakeLLM:
-    """确定性 LLM 桩：按注册的 (tag -> dict) 返回 JSON 字符串。"""
+    """确定性 LLM 桩：按注册的 (tag -> dict) 返回 dict。"""
     def __init__(self, responses=None):
         self.responses = responses or {}
         self.calls = []
