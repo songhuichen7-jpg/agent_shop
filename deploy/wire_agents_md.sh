@@ -15,14 +15,19 @@ case "${1:-}" in
 apply)
   log "workspace git backup commit (restore point)"
   DX "cd $WS && (git add -A && git -c user.email=a@a -c user.name=deploy commit -q -m 'backup before agent_shop wiring '\$(date +%Y%m%d%H%M%S) || echo 'nothing to backup / already clean') && git log --oneline -1"
-  if DX "grep -q '$MARK' $WS/AGENTS.md"; then
-    log "AGENTS.md already wired, skip append"
-  else
-    log "append AGENTS.md + TOOLS.md sections"
-    DX "cat $SECT_A >> $WS/AGENTS.md && cat $SECT_T >> $WS/TOOLS.md && echo appended"
-    DX "cd $WS && git add -A && git -c user.email=a@a -c user.name=deploy commit -q -m 'feat: 接入 跨境客诉助手 操作流程 (AGENTS.md/TOOLS.md)' && git log --oneline -2"
-  fi
-  log "tail AGENTS.md"; DX "tail -8 $WS/AGENTS.md"
+  log "idempotent replace sentinel block in AGENTS.md + TOOLS.md (apply latest)"
+  DX "python3 - <<'PY'
+import pathlib
+B='<!-- AGENT_SHOP_KUAJING:BEGIN'; E='<!-- AGENT_SHOP_KUAJING:END -->'
+for tgt,sect in [('$WS/AGENTS.md','$SECT_A'),('$WS/TOOLS.md','$SECT_T')]:
+    p=pathlib.Path(tgt); t=p.read_text(); new=pathlib.Path(sect).read_text()
+    if B in t:
+        i=t.index(B); j=t.index(E,i)+len(E); t=t[:i].rstrip()+'\n'+t[j:].lstrip()
+    p.write_text(t.rstrip()+'\n'+new.strip()+'\n')
+    print('updated', tgt)
+PY"
+  DX "cd $WS && git add -A && (git -c user.email=a@a -c user.name=deploy commit -q -m 'feat: 接入/更新 跨境客诉助手 操作流程 (AGENTS.md/TOOLS.md)' && git log --oneline -2 || echo 'no change to commit')"
+  log "tail AGENTS.md"; DX "tail -6 $WS/AGENTS.md"
   ;;
 restart)
   log "restart gateway so workspace startup context reloads (youshi untouched)"

@@ -7,6 +7,9 @@
 # Env vars required: FEISHU_HUMAN_CHAT_ID, FEISHU_BITABLE_APP_TOKEN, FEISHU_BITABLE_TABLE_ID
 set -euo pipefail
 
+# 统一经 lark.sh 包装（固定已授权配置 HOME + "$LARK" 路径）
+LARK="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lark.sh"
+
 CMD="${1:-}"
 
 case "$CMD" in
@@ -15,7 +18,7 @@ case "$CMD" in
     # feishu_actions.sh reply <chat_id> <text>
     CHAT_ID="${2:?reply requires chat_id as \$2}"
     TEXT="${3:?reply requires text as \$3}"
-    lark-cli im +messages-send \
+    "$LARK" im +messages-send \
       --as bot \
       --chat-id "$CHAT_ID" \
       --text "$TEXT"
@@ -43,7 +46,7 @@ payload = {'fields': ['类目', '决策', '升级原因'], 'rows': [[category, d
 print(json.dumps(payload, ensure_ascii=False))
 " "$CONTRACT_JSON")
 
-    lark-cli base +record-batch-create \
+    "$LARK" base +record-batch-create \
       --as user \
       --base-token "${FEISHU_BITABLE_APP_TOKEN:?FEISHU_BITABLE_APP_TOKEN not set}" \
       --table-id  "${FEISHU_BITABLE_TABLE_ID:?FEISHU_BITABLE_TABLE_ID not set}" \
@@ -54,7 +57,7 @@ print(json.dumps(payload, ensure_ascii=False))
     # feishu_actions.sh escalate <title> <body>
     TITLE="${2:?escalate requires title as \$2}"
     BODY="${3:?escalate requires body as \$3}"
-    lark-cli task +create \
+    "$LARK" task +create \
       --as user \
       --summary "$TITLE" \
       --description "$BODY" \

@@ -1,36 +1,35 @@
 
+<!-- AGENT_SHOP_KUAJING:BEGIN (managed by deploy/wire_agents_md.sh — 勿手改) -->
 ---
 
 ## 跨境客诉助手 (agent_shop) — 飞书客诉自动处理 [硬性流程]
 
-当飞书收到的消息是**跨境 B2C 物流的商户咨询/客诉**（中文/英文/中英混；常见：物流时效、丢件破损、费用对账、清关、退件、一般咨询；可能带订单号形如 `BF1234`），你**必须**走下面流程，不要凭自己知识直接闲聊作答：
+飞书消息若是**跨境 B2C 物流的商户咨询/客诉**（中/英/混；物流时效、丢件破损、费用对账、清关、退件、一般咨询；常带订单号 `BF1234`），**必须**走下面流程，不要凭自己知识闲聊作答：
 
-1. 运行（用 exec，`MSG` 替换为商户原始消息原文，不要改写）：
+1. 用 exec 跑大脑（`MSG` 替换为商户原始消息原文，勿改写）：
 
    ```
    set -a; . /home/node/agent_shop/.env; set +a; \
    python3 /home/node/agent_shop/skill/scripts/run_pipeline.py "MSG"
    ```
 
-   它会输出一行 JSON，含 `category/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。
+   输出一行 JSON：`category/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。把这行 JSON 原样记为 `J`。
 
-2. 严格按 JSON 的 `decision` 行动：
-   - `decision == "auto"`：用**飞书原生回复**把 `reply_zh` 和 `reply_en` 回给商户（两段都发，保持双语）。然后调一次看板记录：
+2. 先 source 环境（飞书动作脚本需要）：`set -a; . /home/node/agent_shop/.env; set +a`
+
+3. 按 `decision`：
+   - `auto`：用**飞书原生回复**把 `reply_zh` 和 `reply_en` 两段都回给商户；然后记看板：
      ```
-     /home/node/runtime/npm/node_modules/.bin/lark-cli base +record-batch-create --as user \
-       --base-token "$FEISHU_BITABLE_APP_TOKEN" --table-id "$FEISHU_BITABLE_TABLE_ID" \
-       --json '{"fields":["类目","决策","升级原因"],"rows":[["<category>","auto","<citations 逗号拼接 或 - >"]]}'
+     bash /home/node/agent_shop/skill/scripts/feishu_actions.sh log 'J'
      ```
-     （`$FEISHU_BITABLE_*` 来自 `/home/node/agent_shop/.env`，先 source 它。）
-   - `decision == "escalate"`：**不要**把敏感结论（赔付金额、时效承诺、清关结果）直接答复商户。只回一句中性话术（如「您的问题已转人工跟进，稍后联系您 / Your case has been escalated to a human agent」），并建飞书任务：
+   - `escalate`：**不要**把敏感结论（赔付金额/时效承诺/清关结果）答复商户，只回中性话术（如「您的问题已转人工跟进，稍后联系您 / Your case has been escalated to a human agent」）；然后建飞书任务：
      ```
-     /home/node/runtime/npm/node_modules/.bin/lark-cli task +create --as user \
-       --summary "客诉升级: <category>" \
-       --description "原因:<escalate_reason> 引用:<citations> 商户消息:<MSG 摘要>" --format json
+     bash /home/node/agent_shop/skill/scripts/feishu_actions.sh escalate "客诉升级: <category>" "原因:<escalate_reason> 引用:<citations> 商户消息:<MSG 摘要>"
      ```
 
-3. 红线：不得自行编造政策、不得承诺具体到货天数/赔付金额/保证清关；`run_pipeline.py` 没给依据就按 escalate 处理；脚本报错时，回中性话术并按 escalate 建任务，不要硬答。
+4. 红线：不编造政策、不承诺具体到货天数/赔付金额/保证清关；`run_pipeline.py` 无依据即按 escalate；脚本报错则回中性话术并按 escalate 处理，不要硬答。
 
-4. 非跨境物流客诉的普通消息，照常正常对话，不走本流程。
+5. 非跨境物流客诉的普通消息照常正常对话，不走本流程。
 
-环境与命令细节见 `TOOLS.md` 的「agent_shop pipeline」节。
+命令/环境细节见 `TOOLS.md`「agent_shop pipeline」节。`feishu_actions.sh` 已内置 lark-cli 鉴权（经 `lark.sh` 指向持久化已授权配置），无需你再绑定。
+<!-- AGENT_SHOP_KUAJING:END -->
