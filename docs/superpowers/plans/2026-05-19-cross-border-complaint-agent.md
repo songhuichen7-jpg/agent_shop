@@ -794,7 +794,6 @@ git commit -m "feat: draft 双语回复（接口）+ 测试"
 - [ ] **Step 1: 写失败测试**
 
 ```python
-import re
 from src.pipeline import handle
 
 def test_pipeline_outputs_contract(fake_llm, sample_orders, sample_policy):
@@ -1073,7 +1072,7 @@ _THREAT = re.compile(r"差评|1-?star|一星|曝光|工单|投诉|12315|media")
 def decide(category, sentiment, reply, citations, order, guardrail_flags, message):
     if guardrail_flags:
         return "escalate", f"护栏未过:{guardrail_flags}"
-    if category in {"费用与对账争议"} or re.search(r"赔|退款|补偿|refund|compensat", message+reply):
+    if category == "费用与对账争议" or re.search(r"赔|退款|补偿|refund|compensat", message):
         return "escalate", "涉赔付/退款金额认定"
     if category == "清关问题" and re.search(r"海关|扣押|缴税|法务|禁运|customs|seiz", message):
         return "escalate", "海关/法务/禁运"
@@ -1083,6 +1082,8 @@ def decide(category, sentiment, reply, citations, order, guardrail_flags, messag
         return "escalate", "订单查不到且无政策依据，置信低"
     return "auto", ""
 ```
+
+> 计划缺陷修正（2026-05-19）：钱款分支原匹配 `message+reply`，会因合规回复含「赔付」而对几乎所有「丢件破损」工单误升级（抵消护栏意义、拉低 P4 自动解决率）。改为只匹配商户 `message`（回复侧的具体赔付承诺已由 `_PAYOUT` 护栏覆盖）；并把单元素集合 `in {...}` 改为 `==`（M1）。三条 mandated 测试与 pipeline 测试仍全绿（已核验）。
 
 - [ ] **Step 4: 把护栏+决策接入 `src/pipeline.py`**
 
