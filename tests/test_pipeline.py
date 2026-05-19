@@ -1,4 +1,3 @@
-import re
 from src.pipeline import handle
 
 def test_pipeline_outputs_contract(fake_llm, sample_orders, sample_policy):
