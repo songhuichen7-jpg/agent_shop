@@ -150,7 +150,7 @@ OpenClaw（腾讯云，小龙虾） ── 飞书 Channel ── 「跨境客服
 
 ## 10. 阶段拆分（供 writing-plans 出实施计划）
 
-- **P0 环境**：腾讯云一键 OpenClaw + 飞书自建应用（并集权限）接通 channel + **OpenClaw 绑定国产模型（Kimi/百炼，见 §11）** + `npx @larksuite/cli@latest install` + `lark-cli config init` + `lark-cli auth login --recommend`（一次性 OAuth 人工授权）+ 冒烟验证闭环（`lark-cli im +messages-send` 发一条 + 写一行多维表格 + 建一个任务 + `lark-cli auth check`）；实际控制台版本与命令面记录进 README
+- **P0 环境**：腾讯云一键 OpenClaw + 飞书自建应用（并集权限）接通 channel + **OpenClaw 绑定国产模型（DeepSeek，见 §11）** + `npx @larksuite/cli@latest install` + `lark-cli config init` + `lark-cli auth login --recommend`（一次性 OAuth 人工授权）+ 冒烟验证闭环（`lark-cli im +messages-send` 发一条 + 写一行多维表格 + 建一个任务 + `lark-cli auth check`）；实际控制台版本与命令面记录进 README
 - **P1 数据**：政策 KB + mock 订单 + 测试集 v1
 - **P2 Skill v1**：分类→查单→取据→双语起草→输出契约（先无护栏打通）
 - **P3 护栏+决策**：两道护栏 + 升级触发器 + 飞书 CLI 行动（回复/写多维表格/建任务）
@@ -169,7 +169,7 @@ OpenClaw（腾讯云，小龙虾） ── 飞书 Channel ── 「跨境客服
 
 细化（已并入 §4/§10，无需用户决策）：两个飞书集成面区分 + 单应用并集权限；P0 增一次性 `lark-cli auth login` 人工授权步；精确子命令 P0 定型。
 
-**决策（已确认 2026-05-19）：LLM 绑定。** OpenClaw 模型无关。腾讯云大陆服务器出网到 Anthropic 不稳。**线上 OpenClaw 绑国产模型（Kimi/百炼）跑实时客诉**；**离线评测/开发用 Claude**（用户重度可用）保证记分卡质量。含义：护栏与提示词需在国产模型上验证（线上真实路径），评测记分卡注明"线上模型=国产、评测对照=Claude"，不混淆口径。
+**决策（已确认 2026-05-19）：LLM 绑定。** OpenClaw 模型无关。腾讯云大陆服务器优先走国内可访问模型。**线上 OpenClaw 绑 DeepSeek v4-flash 跑实时客诉**；**离线评测/开发用 DeepSeek v4-pro** 保证记分卡质量。含义：护栏与提示词需在线上真实路径验证，评测记分卡注明"线上模型=deepseek-v4-flash、离线评测模型=deepseek-v4-pro"，不混淆口径。
 
 ## 附：工具与版本参考（实现时以官方文档为准）
 
