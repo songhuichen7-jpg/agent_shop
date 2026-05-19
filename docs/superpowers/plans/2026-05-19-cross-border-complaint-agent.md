@@ -650,10 +650,17 @@ Expected: FAIL。
 import json, pathlib, re
 _DEFAULT = pathlib.Path(__file__).parent.parent / "data" / "policy_kb.json"
 
+def _tokens(q: str):
+    # ascii 词 (>=2 字母) + 单个非 ascii 字符（中文等）。中文无 \W 词边界，
+    # 必须按字匹配，否则整串中文会变成一个永不命中的巨型 token
+    # （计划缺陷修正 2026-05-19）。不用 unicode 区间字面量以避免编码坑。
+    ascii_toks = [t for t in re.split(r"\W+", q.lower()) if len(t) >= 2 and t.isascii()]
+    cjk = [ch for ch in q if not ch.isascii() and not ch.isspace()]
+    return ascii_toks + cjk
+
 def _score(q: str, clause: dict) -> int:
     text = (clause["zh"] + clause["en"]).lower()
-    toks = [t for t in re.split(r"\W+", q.lower()) if len(t) >= 2]
-    return sum(1 for t in toks if t in text)
+    return sum(1 for t in _tokens(q) if t in text)
 
 def lookup_policy(query: str, category: str, path=None, k: int = 3):
     kb = json.loads(pathlib.Path(path or _DEFAULT).read_text())
@@ -661,6 +668,8 @@ def lookup_policy(query: str, category: str, path=None, k: int = 3):
     scored = sorted(((_score(query, c), c) for c in pool), key=lambda x: -x[0])
     return [c for s, c in scored if s > 0][:k]
 ```
+
+> 计划缺陷修正（2026-05-19）：原 `_score` 用 `re.split(r"\W+")` 对中文查询会得到一个不可命中的整串 token，导致 `lookup_policy` 永远返回 `[]`、test 1 失败。改为「ascii 词 + 单汉字」混合匹配（确定性、保留“无信号→空”性质，满足 spec“够 grounded 即可”）。测试不变（测试语义正确，缺陷在实现）。
 
 - [ ] **Step 4: 跑确认通过**
 
