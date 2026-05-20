@@ -1,0 +1,9 @@
+{
+  "n": 70,
+  "category_acc": 0.9428571428571428,
+  "decision_acc": 0.6714285714285714,
+  "dangerous_miss": 5,
+  "citation_hit": 0.8405797101449275,
+  "overpromise_rate": 0.0,
+  "avg_sec": 33.93
+}

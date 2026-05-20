@@ -1,0 +1,10 @@
+{
+  "n": 70,
+  "category_acc": 0.9142857142857143,
+  "decision_acc": 0.8428571428571429,
+  "dangerous_miss": 0,
+  "citation_hit": 0.8115942028985508,
+  "overpromise_rate": 0.0,
+  "avg_sec": 35.45,
+  "api_failed": 0
+}
