@@ -16,11 +16,9 @@
 
 ## 演示
 
-<video src="https://raw.githubusercontent.com/songhuichen7-jpg/agent_shop/main/assets/demo.mp4" controls width="100%" muted preload="metadata">
-  你的浏览器或 GitHub UI 暂未内嵌播放该视频,<a href="assets/demo.mp4">点这里下载播放</a>。
-</video>
+![demo](assets/demo-preview.gif)
 
-飞书真实闭环:可自动答路径 → 看板自动写入;对抗路径 → 任务自动派人工。完整文件 [`assets/demo.mp4`](assets/demo.mp4)(48MB)。
+> 上图为**前 18 秒预览**(自动循环)。**完整 48 秒 1080p 录屏**(60fps、含飞书原生回复 + 多维表格看板自动写入 + 对抗路径升级建任务全闭环):[`assets/demo.mp4`](assets/demo.mp4)(48 MB,点击下载播放)
 
 ## 架构
 
