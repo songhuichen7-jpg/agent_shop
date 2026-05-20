@@ -13,23 +13,15 @@
    python3 /home/node/agent_shop/skill/scripts/run_pipeline.py "MSG"
    ```
 
-   输出一行 JSON：`category/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。把这行 JSON 原样记为 `J`。
+   输出一行 JSON：`category/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。**该脚本会自动把本次案例写入飞书多维表格看板；若 decision=escalate 还会自动建飞书任务**——你无需另外调任何 shell。
 
-2. 先 source 环境（飞书动作脚本需要）：`set -a; . /home/node/agent_shop/.env; set +a`
+2. 按 JSON 的 `decision` 用**飞书原生回复**作答：
+   - `auto`：把 `reply_zh` 和 `reply_en` 两段都回给商户（保持双语）。
+   - `escalate`：**不要**把敏感结论（赔付金额/时效承诺/清关结果）答给商户，只回中性话术：`您的问题已转人工跟进，稍后联系您 / Your case has been escalated to a human agent.`
 
-3. 按 `decision`：
-   - `auto`：用**飞书原生回复**把 `reply_zh` 和 `reply_en` 两段都回给商户；然后记看板：
-     ```
-     bash /home/node/agent_shop/skill/scripts/feishu_actions.sh log 'J'
-     ```
-   - `escalate`：**不要**把敏感结论（赔付金额/时效承诺/清关结果）答复商户，只回中性话术（如「您的问题已转人工跟进，稍后联系您 / Your case has been escalated to a human agent」）；然后建飞书任务：
-     ```
-     bash /home/node/agent_shop/skill/scripts/feishu_actions.sh escalate "客诉升级: <category>" "原因:<escalate_reason> 引用:<citations> 商户消息:<MSG 摘要>"
-     ```
+3. 红线：不编造政策、不承诺具体到货天数/赔付金额/保证清关；`run_pipeline.py` 无依据即按 escalate；脚本报错则回中性话术，不要硬答（任务即便没建出来，agent 也不可代赔代承诺）。
 
-4. 红线：不编造政策、不承诺具体到货天数/赔付金额/保证清关；`run_pipeline.py` 无依据即按 escalate；脚本报错则回中性话术并按 escalate 处理，不要硬答。
+4. 非跨境物流客诉的普通消息照常正常对话，不走本流程。
 
-5. 非跨境物流客诉的普通消息照常正常对话，不走本流程。
-
-命令/环境细节见 `TOOLS.md`「agent_shop pipeline」节。`feishu_actions.sh` 已内置 lark-cli 鉴权（经 `lark.sh` 指向持久化已授权配置），无需你再绑定。
+环境与命令细节见 `TOOLS.md`「agent_shop pipeline」节。
 <!-- AGENT_SHOP_KUAJING:END -->
