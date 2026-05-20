@@ -16,7 +16,11 @@
 
 ## 演示
 
-录屏：[`assets/demo.mp4`](assets/demo.mp4)（飞书真实闭环：可自动答路径 → 看板自动写入；对抗路径 → 任务自动派人工）。
+<video src="https://raw.githubusercontent.com/songhuichen7-jpg/agent_shop/main/assets/demo.mp4" controls width="100%" muted preload="metadata">
+  你的浏览器或 GitHub UI 暂未内嵌播放该视频,<a href="assets/demo.mp4">点这里下载播放</a>。
+</video>
+
+飞书真实闭环:可自动答路径 → 看板自动写入;对抗路径 → 任务自动派人工。完整文件 [`assets/demo.mp4`](assets/demo.mp4)(48MB)。
 
 ## 架构
 
