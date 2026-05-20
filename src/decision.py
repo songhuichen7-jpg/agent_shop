@@ -15,14 +15,22 @@ _DEMAND = re.compile(
     r"保证.{0,4}(到|送|赔|清关)")
 # 真正的金额纠纷/索赔诉求（区别于泛泛问“能不能赔/怎么计费”可答咨询）
 _MONEY = re.compile(
-    r"(必须|马上|立刻|立即|现在|now|immediately|right now).{0,8}(赔|退|pay|refund|compensat)|"
+    r"(必须|马上|立刻|立即|现在|now|immediately|right now|today).{0,8}(赔|退|pay|refund|compensat)|"
     r"要求.{0,6}(赔偿|赔付|退款|补偿|compensat|refund)|"
+    r"(want|need|想要|希望|need a).{0,14}(a |an |full |全额|all |complete |the )?\s*(refund|退款|退赔|赔偿)|"
     r"(赔|退款|补偿|refund|compensat\w*).{0,10}(\d|多少钱|金额|amount|\$|美元|usd)|"
     r"索赔|claim\b.{0,10}\$?\d|拒付|charge ?back|赔(偿|付).{0,4}(损失|loss)")
-# 清关里真正需法务/查扣处置（普通补税/格式/仓储费咨询不在内）
+# 对账单/账单申诉、时限申诉边界——需人工核实截止与争议金额（r2 加）
+_BILLING_DISPUTE = re.compile(
+    r"(对账单|账单|bill|billing).{0,30}(异议|争议|申诉|dispute|disput)|"
+    r"(submitted|提交).{0,16}(billing\s+)?(dispute|争议|异议)|"
+    r"(异议|申诉|dispute|disput).{0,30}(过期|超期|deadline|时限|截止|次月.{0,6}号|past .{0,6}deadline|too late|still .{0,8}submit)")
+# 清关里真正需法务/查扣处置（普通补税/格式/仓储费咨询不在内）；r2 补低报申报
 _CUSTOMS_HARD = re.compile(
     r"没收|销毁|查封|查扣|罚没|罚款|法务|律师|涉嫌|违禁|禁运|违规品|"
-    r"prohibit|seiz|confiscat|\blegal\b|lawsuit")
+    r"prohibit|seiz|confiscat|\blegal\b|lawsuit|"
+    r"(低|虚|under|under-)?\s*-?\s*declared\s+at\s+(a\s+)?lower\s+value|"
+    r"(low|under)\s*-?\s*declar\w*|低报\s*(申报|清关|价值)|虚报\s*(价值|清关|申报)")
 # 签收后又报丢失的矛盾纠纷（需人工核实，不能 agent 定论）
 _POSTDLV_LOSS = re.compile(
     r"(已?签收|系统.{0,6}签收|delivered|signed for).{0,24}(丢|没收到|未收到|lost|missing|not receiv)|"
@@ -42,6 +50,8 @@ def decide(category, sentiment, reply, citations, order, guardrail_flags, messag
         return "escalate", "含威胁/争议升级（差评/工单/拒付等）"
     if _MONEY.search(m):
         return "escalate", "涉赔付/退款金额认定或索赔诉求"
+    if _BILLING_DISPUTE.search(m):
+        return "escalate", "对账单/账单申诉，需人工核实金额与时限"
     if category == "清关问题" and _CUSTOMS_HARD.search(m):
         return "escalate", "海关查扣/法务/禁运"
     if category == "丢件破损" and _POSTDLV_LOSS.search(m):
