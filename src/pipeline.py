@@ -11,7 +11,8 @@ ORDER_RE = re.compile(r"BF\d{4,}")
 def handle(message: str, llm, orders_path=None, policy_path=None) -> dict:
     cls = classify(message, llm)
     m = ORDER_RE.search(message)
-    order = lookup_order(m.group(0), path=orders_path) if m else None
+    mentioned_order_id = m.group(0) if m else ""
+    order = lookup_order(mentioned_order_id, path=orders_path) if m else None
     clauses = lookup_policy(message, cls["category"], path=policy_path)
     d = draft_reply(message, order, clauses, llm)
     reply_all = (d.get("reply_zh","") + " " + d.get("reply_en",""))
@@ -22,6 +23,7 @@ def handle(message: str, llm, orders_path=None, policy_path=None) -> dict:
     return {
         "category": cls["category"], "urgency": cls["urgency"],
         "language": cls["language"], "sentiment": cls["sentiment"],
+        "order_id": order["order_id"] if order else mentioned_order_id,
         "decision": decision, "escalate_reason": why,
         "citations": d.get("citations", []), "order_facts": d.get("order_facts", []),
         "confidence": 1.0 if (order or d.get("citations")) else 0.3,

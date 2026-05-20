@@ -12,6 +12,7 @@ def test_pipeline_extracts_order_id(fake_llm, sample_orders, sample_policy):
     fake_llm.responses["classify"]={"category":"物流时效","urgency":"low","language":"zh","sentiment":"calm"}
     fake_llm.responses["draft"]={"reply_zh":"x","reply_en":"x","citations":[],"order_facts":[]}
     out = handle("请查 BF1002", fake_llm, orders_path=sample_orders, policy_path=sample_policy)
+    assert out["order_id"] == "BF1002"
     assert "BF1002" in str(out["order_facts"]) or out["order_facts"]==[]  # 订单已注入上下文
 
 def test_pipeline_escalates_adversarial(fake_llm, sample_orders, sample_policy):

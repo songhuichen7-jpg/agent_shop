@@ -13,7 +13,7 @@
    python3 /home/node/agent_shop/skill/scripts/run_pipeline.py "MSG"
    ```
 
-   输出一行 JSON：`category/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。**该脚本会自动把本次案例写入飞书多维表格看板；若 decision=escalate 还会自动建飞书任务**——你无需另外调任何 shell。
+   输出一行 JSON：`category/order_id/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。**该脚本会自动把本次案例写入飞书多维表格看板；若 decision=escalate 还会自动建飞书任务**——你无需另外调任何 shell。飞书动作失败时会写入 stderr，主 JSON 仍会正常输出。
 
 2. 按 JSON 的 `decision` 用**飞书原生回复**作答：
    - `auto`：把 `reply_zh` 和 `reply_en` 两段都回给商户（保持双语）。

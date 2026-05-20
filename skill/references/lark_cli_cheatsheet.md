@@ -21,7 +21,7 @@ lark-cli base +record-batch-create \
   --as user \
   --base-token "$FEISHU_BITABLE_APP_TOKEN" \
   --table-id "$FEISHU_BITABLE_TABLE_ID" \
-  --json '{"fields":["类目","决策","升级原因"],"rows":[["smoke","auto","P0 smoke"]]}'
+  --json '{"fields":["原始消息","类目","决策","中文回复","英文回复","引用条款","订单号","消息ID","创建时间","紧急度","处理状态","升级原因"],"rows":[["BF1001 delayed","物流时效","auto","中文回复","English reply","P-TIME-01","BF1001",null,"2026-05-20 10:00:00","medium","已自动回复",null]]}'
 ```
 
 写入前先确认表里有这些字段；字段名必须和飞书多维表格完全一致。
@@ -33,6 +33,7 @@ lark-cli task +create \
   --as user \
   --summary "P0 smoke task" \
   --description "由 agent_shop P0 冒烟测试创建" \
+  --assignee "$FEISHU_TASK_ASSIGNEE_ID" \
   --format json
 ```
 
@@ -42,9 +43,10 @@ lark-cli task +create \
 
 ```bash
 lark-cli doctor
-lark-cli auth check --scope "im:message bitable:app task:task"
+lark-cli auth check --scope "im:message bitable:app task:task:write"
 ```
 
 `auth check` 在当前版本必须传 `--scope`，裸跑会报 `required flag(s) "scope" not set`。
 
 > 修正(2026-05-20, P3.4 实测)：im +messages-send 无 --format json；多维表格文本列名为「升级原因」非「备注」。
+> 修正(2026-05-20)：看板写入覆盖 12 列；`urgency=normal` 写入飞书前映射为「medium」，避免自动新增单选项。
