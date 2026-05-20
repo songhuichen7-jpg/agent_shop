@@ -149,19 +149,17 @@ python eval/run_eval.py --which baseline > eval/score_baseline.json # 全量 70 
 - **测试集 n=70** 较小；本作品的方法论与代码可工程化扩展，但生产部署需更广的真实/混合标注集再次验证。
 - **决策层是规则化**：覆盖该 70 条评测集的常见模式很好，但极端长尾仍可能需要 LLM-judge fallback；当前规则错误模式可解释，便于运营迭代。
 - **飞书任务默认不指派人**：设 `FEISHU_TASK_ASSIGNEE_ID` 可自动派给具体 open_id。
-- **作品集用途**：本仓库为 AI 应用方向求职作品，不适合直接用于生产承接真实商户客诉。
+- **演示/研究用途**：本仓库是该问题域的技术探索与方法论验证，不适合直接用于生产承接真实商户客诉。
 
 ## 文档索引
 
 - 设计文档：[`docs/superpowers/specs/2026-05-19-cross-border-complaint-agent-design.md`](docs/superpowers/specs/2026-05-19-cross-border-complaint-agent-design.md)
 - 实施计划（含全部计划缺陷修正记录）：[`docs/superpowers/plans/2026-05-19-cross-border-complaint-agent.md`](docs/superpowers/plans/2026-05-19-cross-border-complaint-agent.md)
 - 评测记分卡：[`eval/SCORECARD.md`](eval/SCORECARD.md)
-- 一页纸投递案例：[`CASE.md`](CASE.md)
 
 ## 作者
 
-陈松辉（[songhuichen7@gmail.com](mailto:songhuichen7@gmail.com)） — 2026 应届，求职 AI 产品 / AI 应用方向。
-GitHub: [@songhuichen7-jpg](https://github.com/songhuichen7-jpg)。
+陈松辉（[songhuichen7@gmail.com](mailto:songhuichen7@gmail.com)） · GitHub: [@songhuichen7-jpg](https://github.com/songhuichen7-jpg)
 
 ## 许可
 
