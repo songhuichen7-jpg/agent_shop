@@ -15,10 +15,21 @@ if [[ -z "$LARK_BIN" || ! -x "$LARK_BIN" ]]; then
   exit 127
 fi
 
+run_with_home() {
+  local home_dir="$1"
+  shift
+  local name
+  while IFS= read -r name; do
+    [[ -n "$name" ]] && unset "$name"
+  done < <(env | sed -n 's/^\(OPENCLAW_[A-Za-z0-9_]*\)=.*/\1/p; s/^\(HERMES_[A-Za-z0-9_]*\)=.*/\1/p')
+  unset LARK_CHANNEL
+  exec env HOME="$home_dir" "$LARK_BIN" "$@"
+}
+
 if [[ -n "${LARK_HOME_DIR:-}" ]]; then
-  exec env HOME="$LARK_HOME_DIR" "$LARK_BIN" "$@"
+  run_with_home "$LARK_HOME_DIR" "$@"
 elif [[ -d /home/node/runtime/larkhome ]]; then
-  exec env HOME="/home/node/runtime/larkhome" "$LARK_BIN" "$@"
+  run_with_home "/home/node/runtime/larkhome" "$@"
 else
   exec "$LARK_BIN" "$@"
 fi

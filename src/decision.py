@@ -8,23 +8,38 @@ _THREAT = re.compile(
 _DEMAND = re.compile(
     r"承诺.{0,6}(日期|时间|到达|送达|赔)|"
     r"(具体|确切|准确|最终|firm|exact|specific|guaranteed?|definite)\s*的?\s*"
-    r"(到达|送达|交付|delivery|arrival)?\s*(日期|时间|date|time|eta)|"
+    r"(到达|送达|交付|退回|返回|delivery|arrival|return|returned)?\s*(日期|时间|date|time|eta)|"
     r"(give|tell|need|want|provide)\b.{0,14}"
     r"(exact|specific|firm|final|guaranteed|definite)?\s*"
-    r"(date|eta|arrival date|delivery date|deadline)|deadline|"
+    r"(date|eta|arrival date|delivery date|return date|deadline)|deadline|"
+    r"(promise|guarantee).{0,20}(return date|returned|return time|date)|"
     r"保证.{0,4}(到|送|赔|清关)")
 # 真正的金额纠纷/索赔诉求（区别于泛泛问“能不能赔/怎么计费”可答咨询）
 _MONEY = re.compile(
-    r"(必须|马上|立刻|立即|现在|now|immediately|right now|today).{0,8}(赔|退|pay|refund|compensat)|"
+    r"(必须|马上|立刻|立即|现在|now|immediately|right now|today).{0,8}(赔|退款|退钱|pay|refund|compensat)|"
     r"要求.{0,6}(赔偿|赔付|退款|补偿|compensat|refund)|"
+    r"demand.{0,16}(refund|compensat|pay)|"
     r"(want|need|想要|希望|need a).{0,14}(a |an |full |全额|all |complete |the )?\s*(refund|退款|退赔|赔偿)|"
-    r"(赔|退款|补偿|refund|compensat\w*).{0,10}(\d|多少钱|金额|amount|\$|美元|usd)|"
-    r"索赔|claim\b.{0,10}\$?\d|拒付|charge ?back|赔(偿|付).{0,4}(损失|loss)")
+    r"(赔|退款|补偿|refund|compensat\w*).{0,20}(\d+\s*(元|美元|USD|usd|RMB|rmb|人民币|%)|多少钱|金额|amount|\$|declared value|shipping cost)|"
+    r"索赔|claim\b.{0,10}\$?\d|拒付|charge ?back",
+    re.IGNORECASE)
+_BUYER_TO_MERCHANT_COMP = re.compile(
+    r"(买家|buyer).{0,16}(要求|demand|asking|asks?).{0,16}(我|商家|merchant|seller).{0,12}(赔|补偿|compensat|refund)"
+)
+_PLATFORM_COMP_REQUEST = re.compile(
+    r"(确认|承诺|confirm|guarantee).{0,24}(赔|退款|补偿|金额|amount|compensat|refund)|"
+    r"(赔|退款|补偿|金额|amount|compensat|refund).{0,24}(确认|承诺|confirm|guarantee|now)"
+)
 # 对账单/账单申诉、时限申诉边界——需人工核实截止与争议金额（r2 加）
 _BILLING_DISPUTE = re.compile(
     r"(对账单|账单|bill|billing).{0,30}(异议|争议|申诉|dispute|disput)|"
     r"(submitted|提交).{0,16}(billing\s+)?(dispute|争议|异议)|"
     r"(异议|申诉|dispute|disput).{0,30}(过期|超期|deadline|时限|截止|次月.{0,6}号|past .{0,6}deadline|too late|still .{0,8}submit)")
+_LOW_VALUE_WRITEOFF = re.compile(
+    r"((低于|小于|少于)\s*50\s*元|[1-4]?\d\s*元|below\s+(CNY|RMB)?\s*50|under\s+(CNY|RMB)?\s*50).{0,30}"
+    r"(自动冲销|冲销|write-?off|written off)|"
+    r"(自动冲销|冲销|write-?off|written off).{0,30}((低于|小于|少于)\s*50\s*元|[1-4]?\d\s*元|below\s+(CNY|RMB)?\s*50|under\s+(CNY|RMB)?\s*50)"
+)
 # 清关里真正需法务/查扣处置（普通补税/格式/仓储费咨询不在内）；r2 补低报申报
 _CUSTOMS_HARD = re.compile(
     r"没收|销毁|查封|查扣|罚没|罚款|法务|律师|涉嫌|违禁|禁运|违规品|"
@@ -48,9 +63,9 @@ def decide(category, sentiment, reply, citations, order, guardrail_flags, messag
         return "escalate", "商户要求具体日期/金额硬承诺，需人工"
     if _THREAT.search(m):
         return "escalate", "含威胁/争议升级（差评/工单/拒付等）"
-    if _MONEY.search(m):
+    if _MONEY.search(m) and not (_BUYER_TO_MERCHANT_COMP.search(m) and not _PLATFORM_COMP_REQUEST.search(m)):
         return "escalate", "涉赔付/退款金额认定或索赔诉求"
-    if _BILLING_DISPUTE.search(m):
+    if _BILLING_DISPUTE.search(m) and not _LOW_VALUE_WRITEOFF.search(m):
         return "escalate", "对账单/账单申诉，需人工核实金额与时限"
     if category == "清关问题" and _CUSTOMS_HARD.search(m):
         return "escalate", "海关查扣/法务/禁运"

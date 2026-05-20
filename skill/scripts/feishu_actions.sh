@@ -77,6 +77,15 @@ print(json.dumps(payload, ensure_ascii=False))
     BODY="${3:?escalate requires body as \$3}"
     EXTRA_ARGS=()
     ASSIGNEE="${FEISHU_TASK_ASSIGNEE_ID:-${FEISHU_HUMAN_OPEN_ID:-}}"
+    if [[ -z "$ASSIGNEE" ]]; then
+      ASSIGNEE=$("$LARK" auth status 2>/dev/null | python3 -c "
+import json, sys
+try:
+    print(json.load(sys.stdin).get('userOpenId', ''))
+except Exception:
+    print('')
+")
+    fi
     if [[ -n "$ASSIGNEE" ]]; then
       EXTRA_ARGS+=(--assignee "$ASSIGNEE")
     fi

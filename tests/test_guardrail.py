@@ -5,6 +5,13 @@ def test_flags_specific_eta():
     bad = check_no_overpromise("您的包裹将在 3 天内送达。", llm=None)
     assert bad and "eta" in bad[0]
 
+def test_policy_time_window_is_not_eta_promise():
+    assert check_no_overpromise("退件商品须在南非海外仓签收后 7 个工作日内完成质检。") == []
+    assert check_no_overpromise("清关失败且无法纠正的包裹将在 14 个工作日内原路退回。") == []
+
+def test_policy_loss_threshold_is_not_eta_promise():
+    assert check_no_overpromise("Tracking must show no update for 30 days before the parcel can be declared lost.") == []
+
 def test_flags_money_promise():
     bad = check_no_overpromise("我们保证赔付 200 美元。", llm=None)
     assert bad and "payout" in bad[0]

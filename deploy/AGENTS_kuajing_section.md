@@ -6,11 +6,11 @@
 
 飞书消息若是**跨境 B2C 物流的商户咨询/客诉**（中/英/混；物流时效、丢件破损、费用对账、清关、退件、一般咨询；常带订单号 `BF1234`），**必须**走下面流程，不要凭自己知识闲聊作答：
 
-1. 用 exec 跑大脑（`MSG` 替换为商户原始消息原文，勿改写）：
+1. 用 exec 跑大脑（`MSG` 替换为商户原始消息原文，勿改写；`MID` 必须取当前消息 metadata 里的 `[message_id: ...]`，没有才留空）：
 
    ```
    set -a; . /home/node/agent_shop/.env; set +a; \
-   python3 /home/node/agent_shop/skill/scripts/run_pipeline.py "MSG"
+   FEISHU_MESSAGE_ID="MID" python3 /home/node/agent_shop/skill/scripts/run_pipeline.py "MSG"
    ```
 
    输出一行 JSON：`category/order_id/decision/citations/order_facts/reply_zh/reply_en/escalate_reason`。**该脚本会自动把本次案例写入飞书多维表格看板；若 decision=escalate 还会自动建飞书任务**——你无需另外调任何 shell。飞书动作失败时会写入 stderr，主 JSON 仍会正常输出。

@@ -2,10 +2,15 @@ import re
 
 # 具体时效承诺（无依据时才算违规）
 _ETA = re.compile(
-    r"(\d+\s*(天|日|个工作日|days?)\s*(内|以内|之内|送达|到达))|"
+    r"((将在?|会在|预计在|保证|承诺).{0,12}\d+\s*(天|日|个工作日|工作日|days?)\s*(内|以内|之内)?.{0,8}(送达|到达|到货|清关通过))|"
+    r"(\d+\s*(天|日|个工作日|工作日|days?)\s*(内|以内|之内)?\s*(送达|到达|到货))|"
     r"保证.{0,4}(到货|到达|送达|清关通过)|"
     r"(guarantee\w*|promise\w*|will (deliver|arrive))\b.{0,20}"
     r"(by |on |\d|deliver|arriv|business day)")
+_NEGATED_PROMISE = re.compile(
+    r"不能|无法|不会|不可|不保证|不承诺|不能承诺|无法保证|"
+    r"cannot|can't|can not|unable|not able|do not guarantee|does not guarantee|no guarantee|cannot promise"
+)
 # 具体赔付承诺（无依据时才算违规）
 _PAYOUT = re.compile(
     r"(赔付|退款|补偿).{0,8}\d+\s*(元|美元|USD|usd|rmb|人民币|\$)|"
@@ -26,7 +31,7 @@ def check_no_overpromise(reply: str, llm=None) -> list[str]:
         s = sent.strip()
         if not s or _CITE.search(s):
             continue
-        if _ETA.search(s) and "eta_promise" not in flags:
+        if _ETA.search(s) and not _NEGATED_PROMISE.search(s.lower()) and "eta_promise" not in flags:
             flags.append("eta_promise")
         if _PAYOUT.search(s) and "payout_promise" not in flags:
             flags.append("payout_promise")
